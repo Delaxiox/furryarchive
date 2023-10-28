@@ -29,11 +29,16 @@ function ConventionsList() {
       <h2>Current Conventions:</h2>
       <ul>
         {conventions.map((convention) => (
-          <li key={convention.id}>
-            <div>
-              <Link to={`/edit/${convention.id}`}>{convention.name}</Link>
-            </div>
-          </li>
+          <Link to={`conventions/edit/${convention.id}`}>
+            <li key={convention.id}>
+              <div>
+                <h3>{convention.name}</h3>
+                <p>Start Date: {convention.startDate}</p>
+                <p>End Date: {convention.endDate}</p>
+                <p>State: {convention.state}</p>
+              </div>
+            </li>
+          </Link>
         ))}
       </ul>
     </div>

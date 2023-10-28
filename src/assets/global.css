@@ -86,15 +86,17 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1300px;
     box-sizing: border-box;
     padding: 64px 32px;
 }
 
 .page-content {
-    display: box;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     padding: 16px 0px;
+    width: 100%;
 }
 
 .centered-text {
@@ -112,9 +114,42 @@ form label {
 }
 
 form input {
-    margin-bottom:24px;
+    margin-bottom:16px;
 }
 
-#ConventionsList ul li {
+.page-container ul {
+width: 100%;
+display: grid; /* Use grid layout for the list items */
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define the grid columns (adjust column width as needed) */
+gap: 20px; /* Add some space between grid items */
+}
+.page-container li {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    opacity: 1;
+    transition: 0.3s all;
+}
+
+.page-container li:hover {
+    opacity: 0.7;
+}
+
+.page-container ul a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li {
     padding: 4px 0px;
+}
+
+ul li p {
+    padding-top:2px;
+}
+
+.page-container div button:last-of-type {
+    margin-top:16px;
 }
